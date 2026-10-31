@@ -411,6 +411,13 @@ void SettingGUI::OnRender()
 			auto et = EyeTracking::GetSingleton();
 			ImGui::Text("Eye tracking: %s", et->GetStateText());
 			ImGui::Text("Valid gaze frames: %llu", (unsigned long long)et->GetValidFrames());
+			ImGui::Text("OSC: %s port %d, packets %llu", et->IsOSCListening() ? "listening on" : "not listening on", et->GetOSCPort(), (unsigned long long)et->GetOSCPacketCount());
+			{
+				std::string last = et->GetOSCLastAddress();
+				ImGui::TextWrapped("Last OSC message: %s", last.empty() ? "(none)" : last.c_str());
+			}
+			ImGui::DragFloat("Gaze Offset X", &et->mOffsetX, 0.002f, -0.5f, 0.5f, "%.3f");
+			ImGui::DragFloat("Gaze Offset Y", &et->mOffsetY, 0.002f, -0.5f, 0.5f, "%.3f");
 			ImGui::DragFloat("Gaze Deadzone", &upscaler->mVRS->mGazeDeadzone, 0.001f, 0.0f, 0.1f, "%.3f");
 			ImGui::Checkbox("Move DLSS Area With Gaze", &upscaler->mGazeFollowDLSS);
 			ImGui::DragFloat("DLSS Area Re-center Threshold", &upscaler->mGazeBoxRecenter, 0.01f, 0.0f, 0.5f, "%.2f");

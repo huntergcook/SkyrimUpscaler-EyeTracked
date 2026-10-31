@@ -1,4 +1,5 @@
 #include <SkyrimUpscaler.h>
+#include "EyeTracking.h"
 #include <PCH.h>
 #include <DRS.h>
 #include <hlsl/flip_vs.inc>
@@ -87,6 +88,20 @@ void SkyrimUpscaler::LoadINI()
 	GetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone, 0.005f);
 	mVRS->mEyeTracked = mEyeTracked;
 	mVRS->mGazeDeadzone = std::clamp(mGazeDeadzone, 0.0f, 0.1f);
+	{
+		auto  et = EyeTracking::GetSingleton();
+		int   mOSCPort = 9000;
+		bool  mEnableOSC = true;
+		float mGazeOffsetX = 0.0f, mGazeOffsetY = 0.0f;
+		GetSettingBool("EyeTrackedFoveatedRendering", mEnableOSC, true);
+		GetSettingInt("EyeTrackedFoveatedRendering", mOSCPort, 9000);
+		GetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetX, 0.0f);
+		GetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetY, 0.0f);
+		et->mEnableOSC = mEnableOSC;
+		et->mOSCPort = std::clamp(mOSCPort, 1, 65535);
+		et->mOffsetX = std::clamp(mGazeOffsetX, -0.5f, 0.5f);
+		et->mOffsetY = std::clamp(mGazeOffsetY, -0.5f, 0.5f);
+	}
 	GetSettingBool("EyeTrackedFoveatedRendering", mGazeFollowDLSS, true);
 	GetSettingFloat("EyeTrackedFoveatedRendering", mGazeBoxRecenter, 0.2f);
 	mGazeBoxRecenter = std::clamp(mGazeBoxRecenter, 0.0f, 0.5f);
@@ -158,6 +173,16 @@ void SkyrimUpscaler::SaveINI()
 	float mGazeDeadzone = mVRS->mGazeDeadzone;
 	SetSettingBool("EyeTrackedFoveatedRendering", mEyeTracked);
 	SetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone);
+	{
+		auto  et = EyeTracking::GetSingleton();
+		bool  mEnableOSC = et->mEnableOSC;
+		int   mOSCPort = et->mOSCPort;
+		float mGazeOffsetX = et->mOffsetX, mGazeOffsetY = et->mOffsetY;
+		SetSettingBool("EyeTrackedFoveatedRendering", mEnableOSC);
+		SetSettingInt("EyeTrackedFoveatedRendering", mOSCPort);
+		SetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetX);
+		SetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetY);
+	}
 	SetSettingBool("EyeTrackedFoveatedRendering", mGazeFollowDLSS);
 	SetSettingFloat("EyeTrackedFoveatedRendering", mGazeBoxRecenter);
 	ini.SaveFile(L"Data\\SKSE\\Plugins\\SkyrimUpscaler.ini");
