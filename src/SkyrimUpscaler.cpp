@@ -80,6 +80,13 @@ void SkyrimUpscaler::LoadINI()
 	mVRS->mOuterRadius = std::clamp(mOuterRadius, 0.0f, 1.5f);
 	mVRS->mCutoutRadius = std::clamp(mCutoutRadius, 0.0f, 2.0f);
 	mVRS->mWiden = std::clamp(mWiden, 0.1f, 4.0f);
+
+	bool  mEyeTracked;
+	float mGazeDeadzone;
+	GetSettingBool("EyeTrackedFoveatedRendering", mEyeTracked, false);
+	GetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone, 0.005f);
+	mVRS->mEyeTracked = mEyeTracked;
+	mVRS->mGazeDeadzone = std::clamp(mGazeDeadzone, 0.0f, 0.1f);
 	mEnableDelayCount = -1;
 
 	bool DLSSAvailable = IsUpscaleMethodAvailable(DLSS);
@@ -143,6 +150,11 @@ void SkyrimUpscaler::SaveINI()
 	SetSettingFloat("FixedFoveatedRendering", mOuterRadius);
 	SetSettingFloat("FixedFoveatedRendering", mCutoutRadius);
 	SetSettingFloat("FixedFoveatedRendering", mWiden);
+
+	bool  mEyeTracked = mVRS->mEyeTracked;
+	float mGazeDeadzone = mVRS->mGazeDeadzone;
+	SetSettingBool("EyeTrackedFoveatedRendering", mEyeTracked);
+	SetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone);
 	ini.SaveFile(L"Data\\SKSE\\Plugins\\SkyrimUpscaler.ini");
 }
 

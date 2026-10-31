@@ -18,6 +18,11 @@ public:
 	float mWiden = 1.5f;
 	bool  mNeedUpdate = false;
 
+	// Eye-tracked foveation: move the full-rate region to where each eye is looking.
+	bool  mEyeTracked = false;
+	float mGazeDeadzone = 0.005f;   // normalized combined-target units; ignore gaze jitter smaller than this
+	bool  mGazeActive = false;      // true while the pattern is centered on gaze rather than the fixed centers
+
 	ImageWrapper                     combinedVRSTex{ nullptr };
 	ImageWrapper                     combinedVRSShowTex{ nullptr };
 	ID3D11NvShadingRateResourceView* combinedVRSView{ nullptr };
@@ -39,6 +44,9 @@ private:
 	int   mDisplaySizeX = 0;
 	int   mDisplaySizeY = 0;
 	float proj[2][2] = { 0, 0, 0, 0 };
+	float fixedProj[2][2] = { 0, 0, 0, 0 };  // fixed centers from the upscaler; fallback when gaze is unavailable
+	INT64 lastGazeFrame = -1;
+	bool  mPatternOnlyUpdate = false;        // gaze moved: refresh the pattern without recreating textures
 
 	ID3D11Device*                    device{ nullptr };
 	ID3D11DeviceContext*             context{ nullptr };
@@ -53,6 +61,8 @@ private:
 	void ApplyCombinedVRS();
 
 	void SetupCombinedVRS();
+
+	void UpdateGaze();
 
 	uint8_t              DistanceToVRSLevel(float distance);
 	std::vector<uint8_t> CreateCombinedFixedFoveatedVRSPattern(int width, int height, int renderWidth, int renderHeight);

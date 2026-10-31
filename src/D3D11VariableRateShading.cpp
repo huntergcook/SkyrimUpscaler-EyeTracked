@@ -1,6 +1,7 @@
 #include "D3D11VariableRateShading.h"
 #include "SkyrimUpscaler.h"
 #include "DRS.h"
+#include "EyeTracking.h"
 
 uint8_t D3D11VariableRateShading::DistanceToVRSLevel(float distance)
 {
@@ -184,10 +185,16 @@ void D3D11VariableRateShading::UpdateTargetInformation(int displayWidth, int dis
 	mDisplaySizeY = displayHeight;
 	mRenderSizeX = renderWidth;
 	mRenderSizeY = renderHeight;
-	proj[0][0] = leftProjX;
-	proj[0][1] = leftProjY;
-	proj[1][0] = rightProjX;
-	proj[1][1] = rightProjY;
+	fixedProj[0][0] = leftProjX;
+	fixedProj[0][1] = leftProjY;
+	fixedProj[1][0] = rightProjX;
+	fixedProj[1][1] = rightProjY;
+	if (!mGazeActive) {
+		proj[0][0] = leftProjX;
+		proj[0][1] = leftProjY;
+		proj[1][0] = rightProjX;
+		proj[1][1] = rightProjY;
+	}
 	mNeedUpdate = true;
 }
 
@@ -251,6 +258,7 @@ void D3D11VariableRateShading::ApplyCombinedVRS()
 	if (!IsEnabled())
 		return;
 
+	UpdateGaze();
 	SetupCombinedVRS();
 	NvAPI_Status status = NvAPI_D3D11_RSSetShadingRateResourceView(context, combinedVRSView);
 	if (status != NVAPI_OK) {
@@ -346,7 +354,12 @@ void D3D11VariableRateShading::SetupCombinedVRS()
 	combinedWidth = vrsWidth;
 	combinedHeight = vrsHeight;
 
-	if (imageSizeUnchanged  || !combinedVRSTex.mImage) {
+	bool patternOnly = mPatternOnlyUpdate;
+	mPatternOnlyUpdate = false;
+
+	// Recreate the textures only when the size changed (or they don't exist yet); otherwise
+	// upload the new pattern into the existing texture.
+	if (!imageSizeUnchanged || !combinedVRSTex.mImage) {
 		logger::info("Creating combined VRS pattern texture of size  {}x{} for input texture size {}x{} and render size {}x{}", vrsWidth, vrsHeight, mDisplaySizeX, mDisplaySizeY, mRenderSizeX, mRenderSizeY);
 		combinedVRSTex.Release();
 		combinedVRSShowTex.Release();
@@ -402,9 +415,47 @@ void D3D11VariableRateShading::SetupCombinedVRS()
 		}
 	} else {
 		auto data = CreateCombinedFixedFoveatedVRSPattern(vrsWidth, vrsHeight, vrsRenderWidth, vrsRenderHeight);
-		context->UpdateSubresource(combinedVRSTex.mImage, 0, NULL, data.data(), 0, 0);
-		data = CreateCombinedFixedFoveatedVRSPatternDebug(vrsWidth, vrsHeight, vrsRenderWidth, vrsRenderHeight);
-		context->UpdateSubresource(combinedVRSShowTex.mImage, 0, NULL, data.data(), 0, 0);
+		context->UpdateSubresource(combinedVRSTex.mImage, 0, NULL, data.data(), vrsWidth, 0);
+		// The debug view is only shown in the settings menu; skip it on per-frame gaze updates
+		// unless the debug overlay is on.
+		if (!patternOnly || SkyrimUpscaler::GetSingleton()->mDebugOverlay) {
+			data = CreateCombinedFixedFoveatedVRSPatternDebug(vrsWidth, vrsHeight, vrsRenderWidth, vrsRenderHeight);
+			context->UpdateSubresource(combinedVRSShowTex.mImage, 0, NULL, data.data(), vrsWidth * 4, 0);
+		}
 	}
 
+}
+
+void D3D11VariableRateShading::UpdateGaze()
+{
+	// Poll once per frame; ApplyCombinedVRS runs every time the main scene target is bound.
+	INT64 frame = SkyrimUpscaler::GetSingleton()->mFrameIndex;
+	if (frame == lastGazeFrame)
+		return;
+	lastGazeFrame = frame;
+
+	float lx, ly, rx, ry;
+	bool  valid = mEyeTracked && EyeTracking::GetSingleton()->Poll(lx, ly, rx, ry);
+
+	if (!valid) {
+		if (mGazeActive) {
+			// Fall back to the fixed centers.
+			mGazeActive = false;
+			memcpy(proj, fixedProj, sizeof(proj));
+			mNeedUpdate = true;
+			mPatternOnlyUpdate = true;
+		}
+		return;
+	}
+
+	float moved = std::max({ fabsf(lx - proj[0][0]), fabsf(ly - proj[0][1]), fabsf(rx - proj[1][0]), fabsf(ry - proj[1][1]) });
+	if (!mGazeActive || moved > mGazeDeadzone) {
+		mGazeActive = true;
+		proj[0][0] = lx;
+		proj[0][1] = ly;
+		proj[1][0] = rx;
+		proj[1][1] = ry;
+		mNeedUpdate = true;
+		mPatternOnlyUpdate = true;
+	}
 }
