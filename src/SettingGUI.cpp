@@ -412,6 +412,8 @@ void SettingGUI::OnRender()
 			ImGui::Text("Eye tracking: %s", et->GetStateText());
 			ImGui::Text("Valid gaze frames: %llu", (unsigned long long)et->GetValidFrames());
 			ImGui::DragFloat("Gaze Deadzone", &upscaler->mVRS->mGazeDeadzone, 0.001f, 0.0f, 0.1f, "%.3f");
+			ImGui::Checkbox("Move DLSS Area With Gaze", &upscaler->mGazeFollowDLSS);
+			ImGui::DragFloat("DLSS Area Re-center Threshold", &upscaler->mGazeBoxRecenter, 0.01f, 0.0f, 0.5f, "%.2f");
 			if (!upscaler->mVRS->mEnableFixedFoveatedRendering)
 				ImGui::TextWrapped("Turn on Fixed Foveated Rendering above; eye tracking moves its rings to where you look.");
 		}

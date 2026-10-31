@@ -87,6 +87,9 @@ void SkyrimUpscaler::LoadINI()
 	GetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone, 0.005f);
 	mVRS->mEyeTracked = mEyeTracked;
 	mVRS->mGazeDeadzone = std::clamp(mGazeDeadzone, 0.0f, 0.1f);
+	GetSettingBool("EyeTrackedFoveatedRendering", mGazeFollowDLSS, true);
+	GetSettingFloat("EyeTrackedFoveatedRendering", mGazeBoxRecenter, 0.2f);
+	mGazeBoxRecenter = std::clamp(mGazeBoxRecenter, 0.0f, 0.5f);
 	mEnableDelayCount = -1;
 
 	bool DLSSAvailable = IsUpscaleMethodAvailable(DLSS);
@@ -155,6 +158,8 @@ void SkyrimUpscaler::SaveINI()
 	float mGazeDeadzone = mVRS->mGazeDeadzone;
 	SetSettingBool("EyeTrackedFoveatedRendering", mEyeTracked);
 	SetSettingFloat("EyeTrackedFoveatedRendering", mGazeDeadzone);
+	SetSettingBool("EyeTrackedFoveatedRendering", mGazeFollowDLSS);
+	SetSettingFloat("EyeTrackedFoveatedRendering", mGazeBoxRecenter);
 	ini.SaveFile(L"Data\\SKSE\\Plugins\\SkyrimUpscaler.ini");
 }
 
@@ -244,10 +249,12 @@ void SkyrimUpscaler::Evaluate(ID3D11Resource* destTex, ID3D11DepthStencilView* d
 						mContext->CopyResource(mTempDepth.mImage, mDepthBuffer.mImage);
 						depthTex = mTempDepth.mImage;
 					}
+					UpdateGazeBoxes();
 					EvaluateParams params = GetEvaluateParams(0, nullptr, targetTex, mMotionVectors.mImage, depthTex, transparentMask, nullptr, nullptr, nullptr, mFoveatedRenderSizeX, mFoveatedRenderSizeY, mSharpness,
-						mJitterOffsets[0], mJitterOffsets[1], mMotionScale[0], mMotionScale[1], false, mNearPlane, mFarPlane, verticalFOV, mFrameIndex, mUpscaleType != XESS);
+						mJitterOffsets[0], mJitterOffsets[1], mMotionScale[0], mMotionScale[1], mGazeBoxReset[0], mNearPlane, mFarPlane, verticalFOV, mFrameIndex, mUpscaleType != XESS);
 					EvaluateParams params2 = GetEvaluateParams(1, nullptr, targetTex, mMotionVectors.mImage, depthTex, transparentMask, nullptr, nullptr, nullptr, mFoveatedRenderSizeX, mFoveatedRenderSizeY, mSharpness,
-						mJitterOffsets[0], mJitterOffsets[1], mMotionScale[0], mMotionScale[1], false, mNearPlane, mFarPlane, verticalFOV, mFrameIndex, mUpscaleType != XESS);
+						mJitterOffsets[0], mJitterOffsets[1], mMotionScale[0], mMotionScale[1], mGazeBoxReset[1], mNearPlane, mFarPlane, verticalFOV, mFrameIndex, mUpscaleType != XESS);
+					mGazeBoxReset[0] = mGazeBoxReset[1] = false;
 					params.colorBase = { mSrcBox[0].left, mSrcBox[0].top };
 					params.depthBase = { mSrcBox[0].left, mSrcBox[0].top };
 					params.motionBase = { mSrcBox[0].left, mSrcBox[0].top };
@@ -359,6 +366,69 @@ void SkyrimUpscaler::SetupD3DBox(float offsetX, float offsetY)
 	mDstBox[0].top = (mDisplaySizeY - mFoveatedDisplaySizeY) / 2 + mFoveatedOffsetY * mDisplaySizeY;
 	mDstBox[1].left = (renderX - mFoveatedDisplaySizeX) / 2 + renderX - mFoveatedOffsetX * renderX;
 	mDstBox[1].top = (mDisplaySizeY - mFoveatedDisplaySizeY) / 2 + mFoveatedOffsetY * mDisplaySizeY;
+
+	// The fixed layout just overwrote the boxes; let the gaze-following box re-place itself next frame.
+	mGazeBoxActive = false;
+}
+
+// Positions eye's foveated box (src in render pixels, dst in display pixels, and normalized rect for
+// the compositing shader) centered on (cx, cy), normalized within that eye's half, clamped to the eye.
+void SkyrimUpscaler::PlaceFoveatedBox(int eye, float cx, float cy)
+{
+	const float boxW = mFoveatedScaleX;  // fraction of one eye's width
+	const float boxH = mFoveatedScaleY;
+	float       left = std::clamp(cx - boxW / 2, 0.0f, 1.0f - boxW);
+	float       top = std::clamp(cy - boxH / 2, 0.0f, 1.0f - boxH);
+
+	const int renderEyeW = mRenderSizeX / 2;
+	const int displayEyeW = mDisplaySizeX / 2;
+
+	auto& src = mSrcBox[eye];
+	src.left = std::min<UINT>(UINT(left * renderEyeW + 0.5f), UINT(renderEyeW - mFoveatedRenderSizeX)) + eye * renderEyeW;
+	src.top = std::min<UINT>(UINT(top * mRenderSizeY + 0.5f), UINT(mRenderSizeY - mFoveatedRenderSizeY));
+	src.right = src.left + mFoveatedRenderSizeX;
+	src.bottom = src.top + mFoveatedRenderSizeY;
+	src.front = 0;
+	src.back = 1;
+
+	auto& dst = mDstBox[eye];
+	dst.left = std::min<UINT>(UINT(left * displayEyeW + 0.5f), UINT(displayEyeW - mFoveatedDisplaySizeX)) + eye * displayEyeW;
+	dst.top = std::min<UINT>(UINT(top * mDisplaySizeY + 0.5f), UINT(mDisplaySizeY - mFoveatedDisplaySizeY));
+
+	mSrcBoxNorm[eye].left = (left + eye) / 2;
+	mSrcBoxNorm[eye].top = top;
+	mSrcBoxNorm[eye].right = mSrcBoxNorm[eye].left + boxW / 2;
+	mSrcBoxNorm[eye].bottom = top + boxH;
+}
+
+void SkyrimUpscaler::UpdateGazeBoxes()
+{
+	bool want = mGazeFollowDLSS && mVRS->mEyeTracked && mVRS->mGazeActive && mFoveatedRenderSizeX > 0 && mRenderSizeX > 0;
+	if (!want) {
+		if (mGazeBoxActive) {
+			// Gaze lost or feature turned off: go back to the fixed box.
+			mGazeBoxActive = false;
+			SetupD3DBox(mFoveatedOffsetX, mFoveatedOffsetY);
+			mGazeBoxReset[0] = mGazeBoxReset[1] = true;
+		}
+		return;
+	}
+
+	float gaze[2][2];
+	mVRS->GetGazeCenters(gaze[0][0], gaze[0][1], gaze[1][0], gaze[1][1]);
+	for (int eye = 0; eye < 2; ++eye) {
+		float gx = std::clamp((gaze[eye][0] - 0.5f * eye) * 2.0f, 0.0f, 1.0f);  // within this eye's half
+		float gy = std::clamp(gaze[eye][1], 0.0f, 1.0f);
+		float dx = fabsf(gx - mGazeBoxCenter[eye][0]) / std::max(mFoveatedScaleX, 0.01f);
+		float dy = fabsf(gy - mGazeBoxCenter[eye][1]) / std::max(mFoveatedScaleY, 0.01f);
+		if (!mGazeBoxActive || dx > mGazeBoxRecenter || dy > mGazeBoxRecenter) {
+			mGazeBoxCenter[eye][0] = gx;
+			mGazeBoxCenter[eye][1] = gy;
+			PlaceFoveatedBox(eye, gx, gy);
+			mGazeBoxReset[eye] = true;
+		}
+	}
+	mGazeBoxActive = true;
 }
 
 bool SkyrimUpscaler::InFoveatedRect(float x, float y)

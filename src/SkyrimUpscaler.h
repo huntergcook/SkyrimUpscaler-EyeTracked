@@ -127,6 +127,16 @@ public:
 	FoveatedRect mSrcBoxNorm[2];
 	ImageWrapper mOutColorRect[2];
 
+	// Gaze-following DLSS box (needs eye-tracked foveation). The box re-centers on the gaze when the
+	// gaze leaves its middle, and DLSS history is reset for that eye on the frame it moves.
+	bool  mGazeFollowDLSS{ true };
+	float mGazeBoxRecenter{ 0.2f };     // re-center when gaze is this far from the box center (fraction of box size)
+	bool  mGazeBoxActive{ false };
+	bool  mGazeBoxReset[2]{ false, false };
+	float mGazeBoxCenter[2][2]{};       // per eye, normalized within that eye's half: x, y
+	void  UpdateGazeBoxes();
+	void  PlaceFoveatedBox(int eye, float cx, float cy);
+
 	ID3D11VertexShader*    mVertexShader{ nullptr };
 	ID3D11PixelShader*     mPixelShader[5]{ nullptr, nullptr, nullptr, nullptr, nullptr };
 	ID3D11SamplerState*    mSampler{ nullptr };

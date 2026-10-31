@@ -23,6 +23,15 @@ public:
 	float mGazeDeadzone = 0.005f;   // normalized combined-target units; ignore gaze jitter smaller than this
 	bool  mGazeActive = false;      // true while the pattern is centered on gaze rather than the fixed centers
 
+	// Current gaze centers in the combined target (valid while mGazeActive).
+	void GetGazeCenters(float& lx, float& ly, float& rx, float& ry) const
+	{
+		lx = proj[0][0];
+		ly = proj[0][1];
+		rx = proj[1][0];
+		ry = proj[1][1];
+	}
+
 	ImageWrapper                     combinedVRSTex{ nullptr };
 	ImageWrapper                     combinedVRSShowTex{ nullptr };
 	ID3D11NvShadingRateResourceView* combinedVRSView{ nullptr };
