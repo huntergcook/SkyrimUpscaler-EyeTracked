@@ -448,7 +448,7 @@ void D3D11VariableRateShading::UpdateGaze()
 		return;
 	}
 
-	float moved = std::max({ fabsf(lx - proj[0][0]), fabsf(ly - proj[0][1]), fabsf(rx - proj[1][0]), fabsf(ry - proj[1][1]) });
+	float moved = (std::max)({ fabsf(lx - proj[0][0]), fabsf(ly - proj[0][1]), fabsf(rx - proj[1][0]), fabsf(ry - proj[1][1]) });
 	if (!mGazeActive || moved > mGazeDeadzone) {
 		mGazeActive = true;
 		proj[0][0] = lx;

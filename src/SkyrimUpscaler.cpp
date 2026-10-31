@@ -384,16 +384,16 @@ void SkyrimUpscaler::PlaceFoveatedBox(int eye, float cx, float cy)
 	const int displayEyeW = mDisplaySizeX / 2;
 
 	auto& src = mSrcBox[eye];
-	src.left = std::min<UINT>(UINT(left * renderEyeW + 0.5f), UINT(renderEyeW - mFoveatedRenderSizeX)) + eye * renderEyeW;
-	src.top = std::min<UINT>(UINT(top * mRenderSizeY + 0.5f), UINT(mRenderSizeY - mFoveatedRenderSizeY));
+	src.left = (std::min<UINT>)(UINT(left * renderEyeW + 0.5f), UINT(renderEyeW - mFoveatedRenderSizeX)) + eye * renderEyeW;
+	src.top = (std::min<UINT>)(UINT(top * mRenderSizeY + 0.5f), UINT(mRenderSizeY - mFoveatedRenderSizeY));
 	src.right = src.left + mFoveatedRenderSizeX;
 	src.bottom = src.top + mFoveatedRenderSizeY;
 	src.front = 0;
 	src.back = 1;
 
 	auto& dst = mDstBox[eye];
-	dst.left = std::min<UINT>(UINT(left * displayEyeW + 0.5f), UINT(displayEyeW - mFoveatedDisplaySizeX)) + eye * displayEyeW;
-	dst.top = std::min<UINT>(UINT(top * mDisplaySizeY + 0.5f), UINT(mDisplaySizeY - mFoveatedDisplaySizeY));
+	dst.left = (std::min<UINT>)(UINT(left * displayEyeW + 0.5f), UINT(displayEyeW - mFoveatedDisplaySizeX)) + eye * displayEyeW;
+	dst.top = (std::min<UINT>)(UINT(top * mDisplaySizeY + 0.5f), UINT(mDisplaySizeY - mFoveatedDisplaySizeY));
 
 	mSrcBoxNorm[eye].left = (left + eye) / 2;
 	mSrcBoxNorm[eye].top = top;
@@ -419,8 +419,8 @@ void SkyrimUpscaler::UpdateGazeBoxes()
 	for (int eye = 0; eye < 2; ++eye) {
 		float gx = std::clamp((gaze[eye][0] - 0.5f * eye) * 2.0f, 0.0f, 1.0f);  // within this eye's half
 		float gy = std::clamp(gaze[eye][1], 0.0f, 1.0f);
-		float dx = fabsf(gx - mGazeBoxCenter[eye][0]) / std::max(mFoveatedScaleX, 0.01f);
-		float dy = fabsf(gy - mGazeBoxCenter[eye][1]) / std::max(mFoveatedScaleY, 0.01f);
+		float dx = fabsf(gx - mGazeBoxCenter[eye][0]) / (std::max)(mFoveatedScaleX, 0.01f);
+		float dy = fabsf(gy - mGazeBoxCenter[eye][1]) / (std::max)(mFoveatedScaleY, 0.01f);
 		if (!mGazeBoxActive || dx > mGazeBoxRecenter || dy > mGazeBoxRecenter) {
 			mGazeBoxCenter[eye][0] = gx;
 			mGazeBoxCenter[eye][1] = gy;
