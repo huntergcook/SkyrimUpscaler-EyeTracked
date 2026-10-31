@@ -2,7 +2,11 @@ name: Build (Skyrim VR)
 
 on:
   push:
+    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -31,12 +35,16 @@ jobs:
 
       - name: Configure
         shell: pwsh
-        env:
-          CXXFLAGS: /wd4100 /wd4189 /wd4244 /wd4267 /wd4305 /wd4456 /wd4458 /wd4459 /wd4701 /wd4702 /wd4996 /wd5054
-        run: cmake -S . --preset=skyrim -DCMAKE_CXX_FLAGS="/EHsc /MP /W3 $env:CXXFLAGS"
+        run: |
+          $flags = "/EHsc /MP /W3 /wd4100 /wd4189 /wd4244 /wd4267 /wd4305 /wd4456 /wd4458 /wd4459 /wd4701 /wd4702 /wd4996 /wd5054"
+          cmake -S . --preset=skyrim "-DCMAKE_CXX_FLAGS=$flags" 2>&1 | Tee-Object -FilePath configure.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Build
-        run: cmake --build build --config Release
+        shell: pwsh
+        run: |
+          cmake --build build --config Release 2>&1 | Tee-Object -FilePath build.log
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Package
         shell: pwsh
@@ -49,3 +57,23 @@ jobs:
         with:
           name: SkyrimUpscaler-EyeTracked
           path: dist
+
+      # Publish the build log (and the DLL when the build succeeds) to the ci-output branch so they
+      # can be read with plain git, without the Actions log/artifact storage.
+      - name: Publish log and output to ci-output branch
+        if: always()
+        shell: pwsh
+        run: |
+          $out = Join-Path $env:RUNNER_TEMP "ci-output"
+          New-Item -ItemType Directory -Force $out | Out-Null
+          foreach ($f in @("configure.log", "build.log")) { if (Test-Path $f) { Copy-Item $f $out } }
+          if (Test-Path dist) { Copy-Item -Recurse dist (Join-Path $out "dist") }
+          "commit: $env:GITHUB_SHA`nrun: $env:GITHUB_RUN_ID`nstatus: ${{ job.status }}" | Set-Content (Join-Path $out "STATUS.txt")
+          Set-Location $out
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b ci-output
+          git add -A
+          git commit -q -m "CI output for $env:GITHUB_SHA ($env:GITHUB_RUN_ID)"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-output
