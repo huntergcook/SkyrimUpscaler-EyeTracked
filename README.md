@@ -24,7 +24,7 @@ FUS's DLSS mod, so keep that mod: it provides the DLSS files this plugin still n
 1. Use FUS's DLSS mod (section 1.2, "DLSS (Nvidia RTX)"). Leave it enabled.
 2. On the Steam Frame, turn on eye tracking (VR settings > General).
 3. On your PC, in SteamVR > Settings > Steam Link, turn on **Share eye tracking data to other apps on this PC**.
-4. Close Skyrim and Mod Organizer's launched game.
+4. Close Skyrim if it is running.
 
 **Install**
 1. Get the plugin: open the `ci-output` branch of this repo and download `dist/SKSE/Plugins/SkyrimUpscaler.dll`
