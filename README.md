@@ -10,7 +10,8 @@ Steam Frame:
   1. SteamVR's `IVRSystem::GetEyeTrackedFoveationCenter` (OpenVR 2.15+, `IVRSystem_026`). Needs eye tracking
      enabled on the headset and "Share eye tracking data to other apps on this PC" turned on in SteamVR's
      Steam Link settings.
-  2. OSC over UDP (Steam Link's eye tracking share), as a fallback.
+  2. OSC over UDP (Steam Link's eye tracking share), as a fallback. Listens on **UDP port 9015** by default
+     (`mOSCPort` in the ini). In SteamVR > Settings > Steam Link, set the OSC port to Custom (out port 9015).
 
 Gaze is read through the OpenVR vtable, so it works with Skyrim VR's old `openvr_api.dll`.
 
@@ -27,6 +28,7 @@ shading rings off. The eye tracking keys:
 | `mGazeDeadzone` | Ignore gaze jitter smaller than this (shading rings only) |
 | `mFoveatedScaleX/Y` | DLSS box size, as a fraction of one eye |
 | `mGazeOffsetX/Y` | Calibration nudge |
+| `mOSCPort` | UDP port for the OSC fallback (default 9015) |
 | `mEnableFixedFoveatedRendering` | Shading rings (coarse shading outside the gaze). Off here: it makes textures outside the gaze blocky |
 
 ## Building

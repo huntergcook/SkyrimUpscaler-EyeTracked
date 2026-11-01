@@ -12,7 +12,7 @@
 //
 // Two sources, tried in order each frame:
 //  1. SteamVR's IVRSystem::GetEyeTrackedFoveationCenter (OpenVR SDK 2.15+, IVRSystem_026).
-//  2. OSC over UDP (default port 9000), which is how Steam Link's "Share eye tracking data to other
+//  2. OSC over UDP (default port 9015), which is how Steam Link's "Share eye tracking data to other
 //     apps on this PC" delivers the Steam Frame's gaze. VRChat-style eye tracking addresses are
 //     understood (/tracking/eye/LeftRightPitchYaw, CenterPitchYaw, LeftRightVec, CenterVec).
 //     Every distinct address received is logged once, so unknown formats show up in the log.
@@ -51,7 +51,7 @@ public:
 	std::string GetOSCLastAddress();
 
 	// Settings
-	int   mOSCPort = 9000;
+	int   mOSCPort = 9015;
 	bool  mEnableOSC = true;
 	float mOffsetX = 0.0f;  // calibration nudges, normalized within one eye (applied to both eyes)
 	float mOffsetY = 0.0f;

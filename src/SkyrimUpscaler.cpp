@@ -90,11 +90,11 @@ void SkyrimUpscaler::LoadINI()
 	mVRS->mGazeDeadzone = std::clamp(mGazeDeadzone, 0.0f, 0.1f);
 	{
 		auto  et = EyeTracking::GetSingleton();
-		int   mOSCPort = 9000;
+		int   mOSCPort = 9015;
 		bool  mEnableOSC = true;
 		float mGazeOffsetX = 0.0f, mGazeOffsetY = 0.0f;
 		GetSettingBool("EyeTrackedFoveatedRendering", mEnableOSC, true);
-		GetSettingInt("EyeTrackedFoveatedRendering", mOSCPort, 9000);
+		GetSettingInt("EyeTrackedFoveatedRendering", mOSCPort, 9015);
 		GetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetX, 0.0f);
 		GetSettingFloat("EyeTrackedFoveatedRendering", mGazeOffsetY, 0.0f);
 		et->mEnableOSC = mEnableOSC;
