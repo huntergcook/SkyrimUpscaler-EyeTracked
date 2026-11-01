@@ -15,6 +15,44 @@ Steam Frame:
 
 Gaze is read through the OpenVR vtable, so it works with Skyrim VR's old `openvr_api.dll`.
 
+## Using it with FUS (Wabbajack modlist)
+
+This is how it is set up with the FUS modlist (tested on the Cangar profile). It replaces the upscaler plugin from
+FUS's DLSS mod, so keep that mod: it provides the DLSS files this plugin still needs.
+
+**Before you start**
+1. Use FUS's DLSS mod (section 1.2, "DLSS (Nvidia RTX)"). Leave it enabled.
+2. On the Steam Frame, turn on eye tracking (VR settings > General).
+3. On your PC, in SteamVR > Settings > Steam Link, turn on **Share eye tracking data to other apps on this PC**.
+4. Close Skyrim and Mod Organizer's launched game.
+
+**Install**
+1. Get the plugin: open the `ci-output` branch of this repo and download `dist/SKSE/Plugins/SkyrimUpscaler.dll`
+   (the `.pdb` next to it is optional). Also download `settings/SkyrimUpscaler.ini` from `main`.
+2. In Mod Organizer 2, right-click the bottom of the mod list and choose **Create empty mod**. Name it
+   `SkyrimUpscalerVR EyeTracked` and enable it.
+3. Right-click the new mod > **Open in Explorer**. Create the folders `SKSE\Plugins` inside it and put the DLL and the
+   ini there.
+4. Make sure the new mod is **below** FUS's DLSS mod in the left pane, so its `SkyrimUpscaler.dll` wins. The bottom of the
+   list is fine.
+5. Launch Skyrim VR from Mod Organizer as usual.
+
+**Check it works**
+1. In the headset, press **End** to open the upscaler menu and tick **Follow Eye Gaze** and **Move DLSS Area With Gaze**
+   (the ini already has them on).
+2. The menu should say it is tracking gaze, and "Valid gaze frames" should keep counting up. The DLSS area (the
+   cleaner image) should follow your eyes.
+3. Box size is **Foveated Scale X/Y** in the menu (0.5 is the FUS default). Use **Gaze Offset X/Y** if the sharp spot
+   sits a little off from where you look.
+
+**If it doesn't work**
+- *No gaze:* check both eye-tracking toggles above. If both are on and gaze still doesn't arrive, restart SteamVR,
+  or reboot. This fixed it for the author.
+- *Black box:* FUS's own tip applies. Press **End**, switch "Use TAA For Periphery" off and back on.
+- *Textures outside your gaze look blocky:* untick **Enable Fixed Foveated Rendering** (the shading rings). It is off in
+  the supplied ini.
+- To go back to the original, disable the new mod. FUS's DLSS mod takes over again.
+
 ## Settings
 
 `settings/SkyrimUpscaler.ini` is the configuration this was tuned with: DLSS quality, a 0.5 gaze-following box,
