@@ -1,0 +1,674 @@
+MSBuild version 17.14.60+43b635718 for .NET Framework
+
+  Checking File Globs
+  1>Checking Build System
+  Building Custom Rule D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/extern/CommonLibSSE-NG/CMakeLists.txt
+  cmake_pch.cxx
+  BGSKeyword.cpp
+  EffectSetting.cpp
+  AIFormulas.cpp
+  AIProcess.cpp
+  ActiveEffect.cpp
+  ActiveEffectFactory.cpp
+  Actor.cpp
+  ActorEquipManager.cpp
+  ActorKill.cpp
+  ActorValueList.cpp
+  ActorValueOwner.cpp
+  AddCallbackVisitor.cpp
+  ArmorRatingVisitor.cpp
+  ArmorRatingVisitorBase.cpp
+  Array.cpp
+  BGSAttackData.cpp
+  BGSBaseAlias.cpp
+  BGSBipedObjectForm.cpp
+  BGSColorForm.cpp
+  BGSCreatedObjectManager.cpp
+  BGSDebris.cpp
+  BGSDecalNode.cpp
+  BGSDefaultObjectManager.cpp
+  BGSEntryPointFunctionDataActivateChoice.cpp
+  BGSEntryPointPerkEntry.cpp
+  BGSFootstepManager.cpp
+  BGSHeadPart.cpp
+  BGSIdleCollection.cpp
+  BGSKeywordForm.cpp
+  BGSListForm.cpp
+  BGSLocation.cpp
+  BGSOpenCloseForm.cpp
+  BGSPerkEntry.cpp
+  BGSPerkRankArray.cpp
+  BGSRefAlias.cpp
+  BGSSaveLoadManager.cpp
+  BGSSkillPerkTreeNode.cpp
+  BGSSoundCategory.cpp
+  BGSStoryTeller.cpp
+  BSAtomic.cpp
+  BSAudioManager.cpp
+  BSDirectInputManager.cpp
+  BSEffectShaderData.cpp
+  BSExtraData.cpp
+  BSFaceGenNiNode.cpp
+  BSFadeNode.cpp
+  BSFixedString.cpp
+  BSGamepadDevice.cpp
+  BSGeometry.cpp
+  BSHandleRefObject.cpp
+  BSInputDevice.cpp
+  BSInputDeviceFactory.cpp
+  BSInputDeviceManager.cpp
+  BSInputEventQueue.cpp
+  BSInstanceTriShape.cpp
+  BSKeyboardDevice.cpp
+  BSLightingShaderMaterialBase.cpp
+  BSLightingShaderProperty.cpp
+  BSModelDB.cpp
+  BSMouseDevice.cpp
+  BSMultiBoundNode.cpp
+  BSOpenVR.cpp
+  BSPCGamepadDeviceDelegate.cpp
+  BSPCGamepadDeviceHandler.cpp
+  BSPCOrbisGamepadDevice.cpp
+  BSPointerHandle.cpp
+  BSResourceNiBinaryStream.cpp
+  BSResponse.cpp
+  BSScaleformManager.cpp
+  BSScaleformTranslator.cpp
+  BSScriptObjectBindPolicy.cpp
+  BSShaderProperty.cpp
+  BSShaderTextureSet.cpp
+  BSSoundHandle.cpp
+  BSStringPool.cpp
+  BSSystemFileStorage.cpp
+  BSTArray.cpp
+  BSTCreateFactoryManager.cpp
+  BSVirtualKeyboardDevice.cpp
+  BSVisit.cpp
+  BSWin32GamepadDevice.cpp
+  BSWin32KeyboardDevice.cpp
+  BSWin32MouseDevice.cpp
+  BSWin32SaveDataSystemUtility.cpp
+  BSWin32VirtualKeyboardDevice.cpp
+  BSWindModifier.cpp
+  BSXFlags.cpp
+  BarterMenu.cpp
+  BipedAnim.cpp
+  BookMenu.cpp
+  BooksRead.cpp
+  bhkCharProxyController.cpp
+  bhkRigidBody.cpp
+  Calendar.cpp
+  ChestsLooted.cpp
+  Color.cpp
+  ColorUtil.cpp
+  CommandTable.cpp
+  ConeProjectile.cpp
+  Console.cpp
+  ConsoleLog.cpp
+  ContainerItemExtra.cpp
+  ContainerMenu.cpp
+  ControlMap.cpp
+  CriticalHit.cpp
+  DisarmedEvent.cpp
+  DragonSoulsGained.cpp
+  Effect.cpp
+  EffectArchetypes.cpp
+  EnchantConstructMenu.cpp
+  Explosion.cpp
+  ExtraAliasInstanceArray.cpp
+  ExtraAshPileRef.cpp
+  ExtraCanTalkToPlayer.cpp
+  ExtraCannotWear.cpp
+  ExtraCharge.cpp
+  ExtraContainerChanges.cpp
+  ExtraCount.cpp
+  ExtraDataList.cpp
+  ExtraEnchantment.cpp
+  ExtraEncounterZone.cpp
+  ExtraForcedTarget.cpp
+  ExtraHealth.cpp
+  ExtraHotkey.cpp
+  ExtraLevCreaModifier.cpp
+  ExtraLightData.cpp
+  ExtraLock.cpp
+  ExtraMissingLinkedRefIDs.cpp
+  ExtraNorthRotation.cpp
+  ExtraOwnership.cpp
+  ExtraPoison.cpp
+  ExtraRank.cpp
+  ExtraReferenceHandle.cpp
+  ExtraSoul.cpp
+  ExtraTextDisplayData.cpp
+  ExtraUniqueID.cpp
+  FindMaxMagnitudeVisitor.cpp
+  FormTypes.cpp
+  FxDelegate.cpp
+  FxDelegateArgs.cpp
+  GAtomic.cpp
+  GFxLoader.cpp
+  GFxLog.cpp
+  GFxMovie.cpp
+  GFxMovieDataDef.cpp
+  GFxMovieDef.cpp
+  GFxMovieView.cpp
+  GFxRenderConfig.cpp
+  GFxResource.cpp
+  GFxResourceID.cpp
+  GFxResourceKey.cpp
+  GFxState.cpp
+  GFxStateBag.cpp
+  GFxTranslator.cpp
+  GFxValue.cpp
+  GFxWStringBuffer.cpp
+  GFxWWHelper.cpp
+  GMemory.cpp
+  GMemoryHeap.cpp
+  GRefCountImpl.cpp
+  GRefCountNTSImpl.cpp
+  GRenderer.cpp
+  GStd.cpp
+  GString.cpp
+  GViewport.cpp
+  GameSettingCollection.cpp
+  GiftMenu.cpp
+  HUDMeter.cpp
+  HUDObject.cpp
+  Hazard.cpp
+  HeapBlock.cpp
+  HeldStateHandler.cpp
+  hkBaseTypes.cpp
+  hkReferencedObject.cpp
+  hkStringPtr.cpp
+  hkVector4.cpp
+  hkpBroadPhase.cpp
+  hkpCdBody.cpp
+  hkpCharacterProxyListener.cpp
+  hkpMaterial.cpp
+  hkpProperty.cpp
+  hkpRigidBody.cpp
+  hkpWorldObject.cpp
+  IAnimationGraphManagerHolder.cpp
+  IFormFactory.cpp
+  IFunction.cpp
+  IHandlerFunctor.cpp
+  IMemoryStore.cpp
+  IMenu.cpp
+  INIPrefSettingCollection.cpp
+  INISettingCollection.cpp
+  IObjectHandlePolicy.cpp
+  IStackCallbackFunctor.cpp
+  IVirtualMachine.cpp
+  IngredientItem.cpp
+  InputEvent.cpp
+  InterfaceStrings.cpp
+  Inventory.cpp
+  Inventory3DManager.cpp
+  InventoryChanges.cpp
+  InventoryEntryData.cpp
+  ItemCrafted.cpp
+  ItemHarvested.cpp
+  ItemList.cpp
+  ItemsPickpocketed.cpp
+  LevelIncrease.cpp
+  LocalMapCamera.cpp
+  Location.cpp
+  LocationCleared.cpp
+  LocationDiscovery.cpp
+  LockpickingMenu.cpp
+  LooseFileStream.cpp
+  MagicCaster.cpp
+  MagicFavorites.cpp
+  MagicFormulas.cpp
+  MagicItem.cpp
+  MagicItemDataCollector.cpp
+  MagicSystem.cpp
+  MagicTarget.cpp
+  MagicUtilities.cpp
+  Main.cpp
+  MaterialIDs.cpp
+  MemoryPage.cpp
+  MenuControls.cpp
+  MenuCursor.cpp
+  MenuEventHandler.cpp
+  Misc.cpp
+  MissileProjectile.cpp
+  NativeFunctionBase.cpp
+  NiAVObject.cpp
+  NiAlphaProperty.cpp
+  NiAnimationKey.cpp
+  NiBinaryStream.cpp
+  NiBooleanExtraData.cpp
+  NiCamera.cpp
+  NiColor.cpp
+  NiColorData.cpp
+  NiColorKey.cpp
+  NiControllerManager.cpp
+  NiControllerSequence.cpp
+  NiExtraData.cpp
+  NiFloatData.cpp
+  NiFloatExtraData.cpp
+  NiFloatKey.cpp
+  NiFloatsExtraData.cpp
+  NiGeometry.cpp
+  NiIntegerExtraData.cpp
+  NiIntegersExtraData.cpp
+  NiInterpolator.cpp
+  NiMath.cpp
+  NiMatrix3.cpp
+  NiMemManager.cpp
+  NiNode.cpp
+  NiObject.cpp
+  NiObjectNET.cpp
+  NiPoint2.cpp
+  NiPoint3.cpp
+  NiRefObject.cpp
+  NiSkinInstance.cpp
+  NiStringsExtraData.cpp
+  NiSystem.cpp
+  NiTCollection.cpp
+  NiTexture.cpp
+  NiTimeController.cpp
+  NiTransform.cpp
+  Object.cpp
+  ObjectTypeInfo.cpp
+  ObjectiveState.cpp
+  PackUnpack.cpp
+  PackedInstructionStream.cpp
+  PlayerCamera.cpp
+  PlayerCharacter.cpp
+  PlayerControls.cpp
+  PlayerInputHandler.cpp
+  ProcessLists.cpp
+  Projectile.cpp
+  QuestStatus.cpp
+  RaceSexMenu.cpp
+  ReferenceEffectController.cpp
+  RemoveCallbackVisitor.cpp
+  Renderer.cpp
+  Rumble.cpp
+  ScrapHeap.cpp
+  Script.cpp
+  ScriptEventSourceHolder.cpp
+  SendUIMessage.cpp
+  Setting.cpp
+  ShadowSceneNode.cpp
+  ShoutAttack.cpp
+  SkillIncrease.cpp
+  Sky.cpp
+  SkyrimVM.cpp
+  SoulsTrapped.cpp
+  SourceActionMap.cpp
+  SpellsLearned.cpp
+  Stack.cpp
+  StackFrame.cpp
+  Stream.cpp
+  StreamBase.cpp
+  Skyrim.cpp
+  TES.cpp
+  TESAIForm.cpp
+  TESActorBase.cpp
+  TESAmmo.cpp
+  TESCamera.cpp
+  TESClimate.cpp
+  TESCondition.cpp
+  TESContainer.cpp
+  TESDataHandler.cpp
+  TESDescription.cpp
+  TESFaction.cpp
+  TESFile.cpp
+  TESForm.cpp
+  TESHavokUtilities.cpp
+  TESHitEvent.cpp
+  TESLeveledList.cpp
+  TESNPC.cpp
+  TESObjectARMA.cpp
+  TESObjectARMO.cpp
+  TESObjectBOOK.cpp
+  TESObjectCELL.cpp
+  TESObjectREFR.cpp
+  TESObjectSTAT.cpp
+  TESObjectWEAP.cpp
+  TESQuest.cpp
+  TESRace.cpp
+  TESSpellList.cpp
+  TESTopic.cpp
+  TESTopicInfo.cpp
+  TESWorldSpace.cpp
+  TaskQueueInterface.cpp
+  ThumbstickEvent.cpp
+  TypeInfo.cpp
+  UI.cpp
+  UI3DSceneManager.cpp
+  UIBlurManager.cpp
+  UIMessageQueue.cpp
+  UnlinkedTypes.cpp
+  UserEvents.cpp
+  Variable.cpp
+  VirtualMachine.cpp
+  WorldSpaceMenu.cpp
+  ZeroFunctionArguments.cpp
+  ID.cpp
+  Module.cpp
+  Relocation.cpp
+  ADVAPI32.cpp
+  D3D11.cpp
+  D3DCOMPILER.cpp
+  DBGHELP.cpp
+  DXGI.cpp
+  KERNEL32.cpp
+  OLE32.cpp
+  SHELL32.cpp
+  USER32.cpp
+  API.cpp
+  IAT.cpp
+  PCH.cpp
+  InputMap.cpp
+  Interfaces.cpp
+  Logger.cpp
+  RegistrationSet.cpp
+  RegistrationSetUnique.cpp
+  Trampoline.cpp
+  Translation.cpp
+  Version.cpp
+  VERSION.cpp
+  CommonLibSSE.vcxproj -> D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\CommonLibSSE\Release\CommonLibSSE.lib
+  Building Custom Rule D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/CMakeLists.txt
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\flip_vs.inc
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\blend_ps.inc
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\blur_ps.inc
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\cancel_jitter_ps.inc
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\debug_ps.inc
+  compilation header save succeeded; see D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\hlsl\upscale_depth_ps.inc
+  cmake_pch.cxx
+  D3D11VariableRateShading.cpp
+  DRS.cpp
+  EyeTracking.cpp
+  ReShadePlugin.cpp
+  SettingGUI.cpp
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/D3D11VariableRateShading.cpp')
+  
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/DRS.cpp')
+  
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+  SkyrimUpscaler.cpp
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\src\SettingGUI.cpp(522,22): warning C4477: 'sprintf_s' : format string '%016llx' requires an argument of type 'unsigned __int64', but variadic argument 2 has type 'ID3D11Texture2D *const ' [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SettingGUI.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/SkyrimUpscaler.cpp')
+  
+  UpscalerHooks.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  XSEPlugin.cpp
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_sli.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_stereo.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_d3dext.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salstart.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/UpscalerHooks.cpp')
+  
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\extern\nvapi\nvapi_lite_salend.h(1,1): warning C4828: The file contains a character starting at offset 0x124 that is illegal in the current source character set (codepage 65001). [D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\SkyrimUpscaler.vcxproj]
+  (compiling source file '../src/XSEPlugin.cpp')
+  
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     Creating library D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/build/Release/SkyrimUpscaler.lib and object D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/build/Release/SkyrimUpscaler.exp
+  Generating code
+  Finished generating code
+  SkyrimUpscaler.vcxproj -> D:\a\SkyrimUpscaler-EyeTracked\SkyrimUpscaler-EyeTracked\build\Release\SkyrimUpscaler.dll
+  Building Custom Rule D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/CMakeLists.txt

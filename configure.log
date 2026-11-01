@@ -1,0 +1,594 @@
+Preset CMake variables:
+
+  CMAKE_MSVC_RUNTIME_LIBRARY="MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
+  CMAKE_TOOLCHAIN_FILE="C:\vcpkg/scripts/buildsystems/vcpkg.cmake"
+  SKSE_SUPPORT_XBYAK="ON"
+  VCPKG_OVERLAY_PORTS="D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/cmake/ports/"
+  VCPKG_TARGET_TRIPLET="x64-windows-static-md"
+
+-- Running vcpkg install
+A suitable version of cmake was not found (required v4.4.4).
+Downloading https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-windows-x86_64.zip -> cmake-4.4.4-windows-x86_64.zip
+Successfully downloaded cmake-4.4.4-windows-x86_64.zip
+Extracting cmake...
+Detecting compiler hash for triplet x64-windows-static-md...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe
+The following packages will be built and installed:
+    bshoshany-thread-pool:x64-windows-static-md@3.5.0
+    catch2:x64-windows-static-md@3.7.1
+    clib-util:x64-windows-static-md@1.3.7#1 -- D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/cmake/ports/clib-util
+    cppwinrt:x64-windows-static-md@2.0.240405.15
+  * directxmath:x64-windows-static-md@2024-02-14#1
+    directxtex[core,dx11]:x64-windows-static-md@2024-09-04
+    directxtk:x64-windows-static-md@2024-09-04
+  * eabase:x64-windows-static-md@2.09.12#3
+    eastl:x64-windows-static-md@3.21.12
+    efsw:x64-windows-static-md@1.4.0
+    fmt:x64-windows-static-md@11.0.2
+    imgui[core,docking-experimental,dx11-binding,win32-binding]:x64-windows-static-md@1.90
+    magic-enum:x64-windows-static-md@0.9.6#1
+    nlohmann-json:x64-windows-static-md@3.11.3#1
+    pystring:x64-windows-static-md@1.1.4
+    rapidcsv:x64-windows-static-md@8.83
+    rsm-binary-io:x64-windows-static-md@2.0.6
+    simpleini:x64-windows-static-md@4.22
+    spdlog:x64-windows-static-md@1.14.1
+    tracy[core,crash-handler]:x64-windows-static-md@0.11.0
+    unordered-dense:x64-windows-static-md@4.4.0
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+    xbyak:x64-windows-static-md@7.6
+Additional packages (*) will be modified to complete this operation.
+%VCPKG_BINARY_SOURCES%: warning: The 'x-gha' binary caching backend has been removed. Consider using a NuGet-based binary caching provider instead, see extended documentation at https://learn.microsoft.com/vcpkg/users/binarycaching?WT.mc_id=vcpkg_inproduct_cli.
+  on expression: clear;x-gha,readwrite
+                                      ^
+Installing 1/24 bshoshany-thread-pool:x64-windows-static-md@3.5.0...
+bshoshany-thread-pool:x64-windows-static-md@3.5.0 package ABI: 5434835910399cec37b490062fd19ea45586823f39484b4d61c4529a7423927e
+Building bshoshany-thread-pool:x64-windows-static-md@3.5.0...
+Downloading https://github.com/bshoshany/thread-pool/archive/v3.5.0.tar.gz -> bshoshany-thread-pool-v3.5.0.tar.gz
+Successfully downloaded bshoshany-thread-pool-v3.5.0.tar.gz
+-- Extracting source C:/vcpkg/downloads/bshoshany-thread-pool-v3.5.0.tar.gz
+-- Using source at C:/vcpkg/buildtrees/bshoshany-thread-pool/src/v3.5.0-facb55aa23.clean
+-- Installing: C:/vcpkg/packages/bshoshany-thread-pool_x64-windows-static-md/include/BS_thread_pool.hpp
+-- Installing: C:/vcpkg/packages/bshoshany-thread-pool_x64-windows-static-md/include/BS_thread_pool_light.hpp
+-- Installing: C:/vcpkg/packages/bshoshany-thread-pool_x64-windows-static-md/share/bshoshany-thread-pool/copyright
+-- Performing post-build validation
+Elapsed time to handle bshoshany-thread-pool:x64-windows-static-md: 393 ms
+Installing 2/24 clib-util:x64-windows-static-md@1.3.7#1...
+clib-util:x64-windows-static-md@1.3.7#1 package ABI: c767e68c5654849faf14da1545053ac2bf78a050ab9a499f38fd60a530555dad
+Building clib-util:x64-windows-static-md@1.3.7#1...
+D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/cmake/ports/clib-util: info: installing overlay port from here
+Downloading https://github.com/powerof3/CLibUtil/archive/993aa55e7d963ba844d53888302587ebabb69547.tar.gz -> powerof3-CLibUtil-993aa55e7d963ba844d53888302587ebabb69547.tar.gz
+Successfully downloaded powerof3-CLibUtil-993aa55e7d963ba844d53888302587ebabb69547.tar.gz
+-- Extracting source C:/vcpkg/downloads/powerof3-CLibUtil-993aa55e7d963ba844d53888302587ebabb69547.tar.gz
+-- Using source at C:/vcpkg/buildtrees/clib-util/src/ebabb69547-00e1652e50.clean
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/bitmasks.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/constexpr_map.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/detail
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/detail/SimpleIni.h
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/detail/XoshiroCpp.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/distribution.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/editorID.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/hash.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/hotkeys.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/numeric.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/rng.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/simpleINI.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/singleton.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/string.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/include/ClibUtil/utils.hpp
+-- Installing: C:/vcpkg/packages/clib-util_x64-windows-static-md/share/clib-util/copyright
+-- Performing post-build validation
+Elapsed time to handle clib-util:x64-windows-static-md: 452 ms
+Installing 3/24 cppwinrt:x64-windows-static-md@2.0.240405.15...
+cppwinrt:x64-windows-static-md@2.0.240405.15 package ABI: 63735735867235517912b628735127975aba9c6b0232b91ddb4bf4b13e5d78ce
+Building cppwinrt:x64-windows-static-md@2.0.240405.15...
+Downloading https://www.nuget.org/api/v2/package/Microsoft.Windows.CppWinRT/2.0.240405.15 -> cppwinrt.2.0.240405.15.zip
+Successfully downloaded cppwinrt.2.0.240405.15.zip
+-- Extracting source C:/vcpkg/downloads/cppwinrt.2.0.240405.15.zip
+-- Using source at C:/vcpkg/buildtrees/cppwinrt/src/cppwinrt-4f3904006f.clean
+-- Generating headers for Windows SDK 10.0.26100.0
+-- Installing: C:/vcpkg/packages/cppwinrt_x64-windows-static-md/lib/cppwinrt_fast_forwarder.lib
+-- Installing: C:/vcpkg/packages/cppwinrt_x64-windows-static-md/debug/lib/cppwinrt_fast_forwarder.lib
+-- Installing: C:/vcpkg/packages/cppwinrt_x64-windows-static-md/tools/cppwinrt/cppwinrt.exe
+-- Installing: C:/vcpkg/packages/cppwinrt_x64-windows-static-md/share/cppwinrt/usage
+-- Installing: C:/vcpkg/packages/cppwinrt_x64-windows-static-md/share/cppwinrt/copyright
+-- Performing post-build validation
+Elapsed time to handle cppwinrt:x64-windows-static-md: 3.5 s
+Installing 4/24 vcpkg-cmake-config:x64-windows@2024-05-23...
+vcpkg-cmake-config:x64-windows@2024-05-23 package ABI: 2e4676f29a61ecadbb195d5ade854aaedc0c249a24df04d5b112c0d8245b0b59
+Building vcpkg-cmake-config:x64-windows@2024-05-23...
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 51.8 ms
+Installing 5/24 vcpkg-cmake:x64-windows@2024-04-23...
+vcpkg-cmake:x64-windows@2024-04-23 package ABI: 24b3c10d33ed0d39e7d2f4bd49283cf05a78e18048b6ada64d0705adf6ced55c
+Building vcpkg-cmake:x64-windows@2024-04-23...
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: C:/vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Elapsed time to handle vcpkg-cmake:x64-windows: 62.8 ms
+Installing 6/24 directxmath:x64-windows-static-md@2024-02-14#1...
+directxmath:x64-windows-static-md@2024-02-14#1 package ABI: 13d97fe357527653847590fce485bad49a57d3a9794d46e6179fc7bc9ea5d026
+Building directxmath:x64-windows-static-md@2024-02-14#1...
+Downloading https://github.com/Microsoft/DirectXMath/archive/feb2024b.tar.gz -> Microsoft-DirectXMath-feb2024b.tar.gz
+Successfully downloaded Microsoft-DirectXMath-feb2024b.tar.gz
+-- Extracting source C:/vcpkg/downloads/Microsoft-DirectXMath-feb2024b.tar.gz
+-- Using source at C:/vcpkg/buildtrees/directxmath/src/feb2024b-d536663931.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/directxmath_x64-windows-static-md/share/pkgconfig/DirectXMath.pc
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxmath_x64-windows-static-md/lib/pkgconfig/DirectXMath.pc
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxmath_x64-windows-static-md/share/pkgconfig/DirectXMath.pc
+Downloading msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst, trying https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+Successfully downloaded msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+Downloading msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst, trying https://mirror.msys2.org/msys/x86_64/msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+Successfully downloaded msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxmath_x64-windows-static-md/debug/lib/pkgconfig/DirectXMath.pc
+-- Installing: C:/vcpkg/packages/directxmath_x64-windows-static-md/share/directxmath/usage
+-- Installing: C:/vcpkg/packages/directxmath_x64-windows-static-md/share/directxmath/copyright
+-- Performing post-build validation
+Elapsed time to handle directxmath:x64-windows-static-md: 3.9 s
+Installing 7/24 directxtex[core,dx11]:x64-windows-static-md@2024-09-04...
+directxtex[core,dx11]:x64-windows-static-md@2024-09-04 package ABI: 1b3f69621a316d3eace2389609ebbe8ed08813dbc13ff0f21127247db01d61ec
+Building directxtex[core,dx11]:x64-windows-static-md@2024-09-04...
+Downloading https://github.com/Microsoft/DirectXTex/archive/sep2024.tar.gz -> Microsoft-DirectXTex-sep2024.tar.gz
+Successfully downloaded Microsoft-DirectXTex-sep2024.tar.gz
+-- Extracting source C:/vcpkg/downloads/Microsoft-DirectXTex-sep2024.tar.gz
+-- Using source at C:/vcpkg/buildtrees/directxtex/src/sep2024-cef494414c.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxtex_x64-windows-static-md/lib/pkgconfig/DirectXTex.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxtex_x64-windows-static-md/debug/lib/pkgconfig/DirectXTex.pc
+-- Installing: C:/vcpkg/packages/directxtex_x64-windows-static-md/share/directxtex/usage
+-- Installing: C:/vcpkg/packages/directxtex_x64-windows-static-md/share/directxtex/copyright
+-- Performing post-build validation
+Elapsed time to handle directxtex:x64-windows-static-md: 58 s
+Installing 8/24 eabase:x64-windows-static-md@2.09.12#3...
+eabase:x64-windows-static-md@2.09.12#3 package ABI: 25c6a7101fa03b55eb6b0426f0a1bf5ceb9b4ec1ec9815b3afc00c5bc6e80d2a
+Building eabase:x64-windows-static-md@2.09.12#3...
+Downloading https://github.com/electronicarts/EABase/archive/d1be0a1d0fc01a9bf8f3f2cea75018df0d2410ee.tar.gz -> electronicarts-EABase-d1be0a1d0fc01a9bf8f3f2cea75018df0d2410ee.tar.gz
+Successfully downloaded electronicarts-EABase-d1be0a1d0fc01a9bf8f3f2cea75018df0d2410ee.tar.gz
+-- Extracting source C:/vcpkg/downloads/electronicarts-EABase-d1be0a1d0fc01a9bf8f3f2cea75018df0d2410ee.tar.gz
+-- Applying patch fix_cmake_install.patch
+-- Using source at C:/vcpkg/buildtrees/eabase/src/df0d2410ee-10db7527f3.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/eabase_x64-windows-static-md/share/eabase/copyright
+-- Performing post-build validation
+Elapsed time to handle eabase:x64-windows-static-md: 1.5 s
+Installing 9/24 eastl:x64-windows-static-md@3.21.12...
+eastl:x64-windows-static-md@3.21.12 package ABI: 82fa2deedd72db6975bded23b1650976f44b3ec2669f714c07a5dcfc6d8342d3
+Building eastl:x64-windows-static-md@3.21.12...
+Downloading https://github.com/electronicarts/EASTL/archive/3.21.12.tar.gz -> electronicarts-EASTL-3.21.12.tar.gz
+Successfully downloaded electronicarts-EASTL-3.21.12.tar.gz
+-- Extracting source C:/vcpkg/downloads/electronicarts-EASTL-3.21.12.tar.gz
+-- Applying patch 0001-fix-cmake-install.patch
+-- Applying patch 0002-fix-error-C2338.patch
+-- Using source at C:/vcpkg/buildtrees/eastl/src/3.21.12-aacb3eef4c.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/eastl_x64-windows-static-md/share/eastl/copyright
+-- Installing: C:/vcpkg/packages/eastl_x64-windows-static-md/share/eastl/3RDPARTYLICENSES.TXT
+-- Installing: C:/vcpkg/packages/eastl_x64-windows-static-md/share/eastl/CommonCppFlags.cmake
+-- Performing post-build validation
+Elapsed time to handle eastl:x64-windows-static-md: 8 s
+Installing 10/24 efsw:x64-windows-static-md@1.4.0...
+efsw:x64-windows-static-md@1.4.0 package ABI: 7f23366f85bf932a42c1a8284ad87e8f2e8a777a55f850eec7de673b9e75f8eb
+Building efsw:x64-windows-static-md@1.4.0...
+Downloading https://github.com/SpartanJ/efsw/archive/1.4.0.tar.gz -> SpartanJ-efsw-1.4.0.tar.gz
+Successfully downloaded SpartanJ-efsw-1.4.0.tar.gz
+-- Extracting source C:/vcpkg/downloads/SpartanJ-efsw-1.4.0.tar.gz
+-- Using source at C:/vcpkg/buildtrees/efsw/src/1.4.0-a069686da1.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/efsw_x64-windows-static-md/share/efsw/copyright
+-- Performing post-build validation
+Elapsed time to handle efsw:x64-windows-static-md: 17 s
+Installing 11/24 imgui[core,docking-experimental,dx11-binding,win32-binding]:x64-windows-static-md@1.90...
+imgui[core,docking-experimental,dx11-binding,win32-binding]:x64-windows-static-md@1.90 package ABI: b5bdc25ea8b4ecc7ef73fbf1927a5ce6200b0e9227ca1f3f315b6e6bf7e87c78
+Building imgui[core,docking-experimental,dx11-binding,win32-binding]:x64-windows-static-md@1.90...
+Downloading https://github.com/ocornut/imgui/archive/v1.90-docking.tar.gz -> ocornut-imgui-v1.90-docking.tar.gz
+Successfully downloaded ocornut-imgui-v1.90-docking.tar.gz
+-- Extracting source C:/vcpkg/downloads/ocornut-imgui-v1.90-docking.tar.gz
+-- Using source at C:/vcpkg/buildtrees/imgui/src/90-docking-6f9baf7b60.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/imgui_x64-windows-static-md/share/imgui/copyright
+-- Performing post-build validation
+Elapsed time to handle imgui:x64-windows-static-md: 13 s
+Installing 12/24 magic-enum:x64-windows-static-md@0.9.6#1...
+magic-enum:x64-windows-static-md@0.9.6#1 package ABI: ddfb60e635a7fc488d8f3bd2b55f616e4061d075994b731ccae01816364124cf
+Building magic-enum:x64-windows-static-md@0.9.6#1...
+Downloading https://github.com/Neargye/magic_enum/archive/v0.9.6.tar.gz -> Neargye-magic_enum-v0.9.6.tar.gz
+Successfully downloaded Neargye-magic_enum-v0.9.6.tar.gz
+-- Extracting source C:/vcpkg/downloads/Neargye-magic_enum-v0.9.6.tar.gz
+-- Using source at C:/vcpkg/buildtrees/magic-enum/src/v0.9.6-27d538d611.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/magic-enum_x64-windows-static-md/share/magic-enum/usage
+-- Performing post-build validation
+Elapsed time to handle magic-enum:x64-windows-static-md: 1.3 s
+Installing 13/24 nlohmann-json:x64-windows-static-md@3.11.3#1...
+nlohmann-json:x64-windows-static-md@3.11.3#1 package ABI: ac8689ca2e87f11b3c5b145ba80f16c7c17eecb7a19fd5ca41069fb1cd9d4f8e
+Building nlohmann-json:x64-windows-static-md@3.11.3#1...
+Downloading https://github.com/nlohmann/json/archive/v3.11.3.tar.gz -> nlohmann-json-v3.11.3.tar.gz
+Successfully downloaded nlohmann-json-v3.11.3.tar.gz
+-- Extracting source C:/vcpkg/downloads/nlohmann-json-v3.11.3.tar.gz
+-- Using source at C:/vcpkg/buildtrees/nlohmann-json/src/v3.11.3-434e7fbc3e.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/nlohmann-json_x64-windows-static-md/share/pkgconfig/nlohmann_json.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/nlohmann-json_x64-windows-static-md/debug/share/pkgconfig/nlohmann_json.pc
+-- Installing: C:/vcpkg/packages/nlohmann-json_x64-windows-static-md/share/nlohmann-json/copyright
+-- Performing post-build validation
+Elapsed time to handle nlohmann-json:x64-windows-static-md: 3.3 s
+Installing 14/24 pystring:x64-windows-static-md@1.1.4...
+pystring:x64-windows-static-md@1.1.4 package ABI: 148b43f1ef8609f61bc60f64860494fa80c95ba9c6a10422e55e8df08b749753
+Building pystring:x64-windows-static-md@1.1.4...
+Downloading https://github.com/imageworks/pystring/archive/v1.1.4.tar.gz -> imageworks-pystring-v1.1.4.tar.gz
+Successfully downloaded imageworks-pystring-v1.1.4.tar.gz
+-- Extracting source C:/vcpkg/downloads/imageworks-pystring-v1.1.4.tar.gz
+-- Using source at C:/vcpkg/buildtrees/pystring/src/v1.1.4-dfb47bfe5a.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/pystring_x64-windows-static-md/share/pystring/copyright
+-- Performing post-build validation
+Elapsed time to handle pystring:x64-windows-static-md: 3.3 s
+Installing 15/24 rsm-binary-io:x64-windows-static-md@2.0.6...
+rsm-binary-io:x64-windows-static-md@2.0.6 package ABI: c0972627b8f6d6d191dc51e64dc7d8ed314973af0633265d7fe7ee2e177f48f0
+Building rsm-binary-io:x64-windows-static-md@2.0.6...
+Downloading https://github.com/Ryan-rsm-McKenzie/binary_io/archive/2.0.6.tar.gz -> Ryan-rsm-McKenzie-binary_io-2.0.6.tar.gz
+Successfully downloaded Ryan-rsm-McKenzie-binary_io-2.0.6.tar.gz
+-- Extracting source C:/vcpkg/downloads/Ryan-rsm-McKenzie-binary_io-2.0.6.tar.gz
+-- Using source at C:/vcpkg/buildtrees/rsm-binary-io/src/2.0.6-425081b830.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/rsm-binary-io_x64-windows-static-md/share/rsm-binary-io/copyright
+-- Performing post-build validation
+Elapsed time to handle rsm-binary-io:x64-windows-static-md: 6 s
+Installing 16/24 simpleini:x64-windows-static-md@4.22...
+simpleini:x64-windows-static-md@4.22 package ABI: 89c4dc8777f82f686ee2af0168d8434e321359f774bda59dccab5dbad433ad8e
+Building simpleini:x64-windows-static-md@4.22...
+Downloading https://github.com/brofield/simpleini/archive/v4.22.tar.gz -> brofield-simpleini-v4.22.tar.gz
+Successfully downloaded brofield-simpleini-v4.22.tar.gz
+-- Extracting source C:/vcpkg/downloads/brofield-simpleini-v4.22.tar.gz
+-- Using source at C:/vcpkg/buildtrees/simpleini/src/v4.22-e4c8abcd5b.clean
+-- Installing: C:/vcpkg/packages/simpleini_x64-windows-static-md/include/SimpleIni.h
+-- Installing: C:/vcpkg/packages/simpleini_x64-windows-static-md/include/ConvertUTF.h
+-- Installing: C:/vcpkg/packages/simpleini_x64-windows-static-md/include/ConvertUTF.c
+-- Installing: C:/vcpkg/packages/simpleini_x64-windows-static-md/share/simpleini/copyright
+-- Performing post-build validation
+Elapsed time to handle simpleini:x64-windows-static-md: 402 ms
+Installing 17/24 tracy[core,crash-handler]:x64-windows-static-md@0.11.0...
+tracy[core,crash-handler]:x64-windows-static-md@0.11.0 package ABI: 483cd86130fa44736930285f23b38ff17b4f10ab9d959c8c59199486ebb556cc
+Building tracy[core,crash-handler]:x64-windows-static-md@0.11.0...
+Downloading https://github.com/wolfpld/tracy/archive/v0.11.0.tar.gz -> wolfpld-tracy-v0.11.0.tar.gz
+Successfully downloaded wolfpld-tracy-v0.11.0.tar.gz
+-- Extracting source C:/vcpkg/downloads/wolfpld-tracy-v0.11.0.tar.gz
+-- Applying patch build-tools.patch
+-- Using source at C:/vcpkg/buildtrees/tracy/src/v0.11.0-5589a2c512.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/tracy_x64-windows-static-md/share/tracy/copyright
+-- Performing post-build validation
+Elapsed time to handle tracy:x64-windows-static-md: 7.1 s
+Installing 18/24 unordered-dense:x64-windows-static-md@4.4.0...
+unordered-dense:x64-windows-static-md@4.4.0 package ABI: 7f07719c231d1595351b251deab3963afeacf711c07006d464c7d7256cf38ea0
+Building unordered-dense:x64-windows-static-md@4.4.0...
+Downloading https://github.com/martinus/unordered_dense/archive/v4.4.0.tar.gz -> martinus-unordered_dense-v4.4.0.tar.gz
+Successfully downloaded martinus-unordered_dense-v4.4.0.tar.gz
+-- Extracting source C:/vcpkg/downloads/martinus-unordered_dense-v4.4.0.tar.gz
+-- Using source at C:/vcpkg/buildtrees/unordered-dense/src/v4.4.0-0e016f203c.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/unordered-dense_x64-windows-static-md/share/unordered-dense/copyright
+-- Performing post-build validation
+Elapsed time to handle unordered-dense:x64-windows-static-md: 3.6 s
+Installing 19/24 xbyak:x64-windows-static-md@7.6...
+xbyak:x64-windows-static-md@7.6 package ABI: 90ffc0dd076a81534dea07d238d468b4de117b50cfd7cc2cf1e4b49b5742380e
+Building xbyak:x64-windows-static-md@7.6...
+Downloading https://github.com/herumi/xbyak/archive/v7.06.tar.gz -> herumi-xbyak-v7.06.tar.gz
+Successfully downloaded herumi-xbyak-v7.06.tar.gz
+-- Extracting source C:/vcpkg/downloads/herumi-xbyak-v7.06.tar.gz
+-- Using source at C:/vcpkg/buildtrees/xbyak/src/v7.06-87360b2c0c.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/xbyak_x64-windows-static-md/share/xbyak/copyright
+-- Performing post-build validation
+Elapsed time to handle xbyak:x64-windows-static-md: 1.6 s
+Installing 20/24 catch2:x64-windows-static-md@3.7.1...
+catch2:x64-windows-static-md@3.7.1 package ABI: 0cc9dca1de310877176cbc9cb235b102299e6b1790caf994ac1b3450fa1c4501
+Building catch2:x64-windows-static-md@3.7.1...
+Downloading https://github.com/catchorg/Catch2/archive/v3.7.1.tar.gz -> catchorg-Catch2-v3.7.1.tar.gz
+Successfully downloaded catchorg-Catch2-v3.7.1.tar.gz
+-- Extracting source C:/vcpkg/downloads/catchorg-Catch2-v3.7.1.tar.gz
+-- Applying patch fix-install-path.patch
+-- Using source at C:/vcpkg/buildtrees/catch2/src/v3.7.1-253f17e323.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/catch2_x64-windows-static-md/lib/pkgconfig/catch2-with-main.pc
+-- Fixing pkgconfig file: C:/vcpkg/packages/catch2_x64-windows-static-md/lib/pkgconfig/catch2.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/catch2_x64-windows-static-md/debug/lib/pkgconfig/catch2-with-main.pc
+-- Fixing pkgconfig file: C:/vcpkg/packages/catch2_x64-windows-static-md/debug/lib/pkgconfig/catch2.pc
+-- Installing: C:/vcpkg/packages/catch2_x64-windows-static-md/share/catch2/copyright
+-- Performing post-build validation
+Elapsed time to handle catch2:x64-windows-static-md: 60 s
+Installing 21/24 directxtk:x64-windows-static-md@2024-09-04...
+directxtk:x64-windows-static-md@2024-09-04 package ABI: ea8a7e7bef0a69a676c2068ec2430512f5253398c60e4e585d67df7fdc82a97f
+Building directxtk:x64-windows-static-md@2024-09-04...
+Downloading https://github.com/Microsoft/DirectXTK/archive/sep2024.tar.gz -> Microsoft-DirectXTK-sep2024.tar.gz
+Successfully downloaded Microsoft-DirectXTK-sep2024.tar.gz
+-- Extracting source C:/vcpkg/downloads/Microsoft-DirectXTK-sep2024.tar.gz
+-- Using source at C:/vcpkg/buildtrees/directxtk/src/sep2024-1a3f22a7f6.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxtk_x64-windows-static-md/lib/pkgconfig/DirectXTK.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/directxtk_x64-windows-static-md/debug/lib/pkgconfig/DirectXTK.pc
+-- Installing: C:/vcpkg/packages/directxtk_x64-windows-static-md/share/directxtk/usage
+-- Installing: C:/vcpkg/packages/directxtk_x64-windows-static-md/share/directxtk/copyright
+-- Performing post-build validation
+Elapsed time to handle directxtk:x64-windows-static-md: 35 s
+Installing 22/24 fmt:x64-windows-static-md@11.0.2...
+fmt:x64-windows-static-md@11.0.2 package ABI: f958037a15ac1a9ed515d7bab8766fb345d8b99140ad607d340ed2d099a3f9bc
+Building fmt:x64-windows-static-md@11.0.2...
+Downloading https://github.com/fmtlib/fmt/archive/11.0.2.tar.gz -> fmtlib-fmt-11.0.2.tar.gz
+Successfully downloaded fmtlib-fmt-11.0.2.tar.gz
+-- Extracting source C:/vcpkg/downloads/fmtlib-fmt-11.0.2.tar.gz
+-- Applying patch fix-write-batch.patch
+-- Using source at C:/vcpkg/buildtrees/fmt/src/11.0.2-463dc5ff21.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/fmt_x64-windows-static-md/lib/pkgconfig/fmt.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/fmt_x64-windows-static-md/debug/lib/pkgconfig/fmt.pc
+-- Installing: C:/vcpkg/packages/fmt_x64-windows-static-md/share/fmt/usage
+-- Installing: C:/vcpkg/packages/fmt_x64-windows-static-md/share/fmt/copyright
+-- Performing post-build validation
+Elapsed time to handle fmt:x64-windows-static-md: 5.4 s
+Installing 23/24 rapidcsv:x64-windows-static-md@8.83...
+rapidcsv:x64-windows-static-md@8.83 package ABI: b654e90f58b21d698fb5b738b0c955e18fab0a7bd626d7952ca82695a8cd021e
+Building rapidcsv:x64-windows-static-md@8.83...
+Downloading https://github.com/d99kris/rapidcsv/archive/v8.83.tar.gz -> d99kris-rapidcsv-v8.83.tar.gz
+Successfully downloaded d99kris-rapidcsv-v8.83.tar.gz
+-- Extracting source C:/vcpkg/downloads/d99kris-rapidcsv-v8.83.tar.gz
+-- Using source at C:/vcpkg/buildtrees/rapidcsv/src/v8.83-1e2ef20331.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Installing: C:/vcpkg/packages/rapidcsv_x64-windows-static-md/share/rapidcsv/copyright
+-- Performing post-build validation
+Elapsed time to handle rapidcsv:x64-windows-static-md: 1.5 s
+Installing 24/24 spdlog:x64-windows-static-md@1.14.1...
+spdlog:x64-windows-static-md@1.14.1 package ABI: 50b1bfa2ea88570e7e3c1bd3687e7b6e426cd7c50eecffd113038467d46ad284
+Building spdlog:x64-windows-static-md@1.14.1...
+Downloading https://github.com/gabime/spdlog/archive/v1.14.1.tar.gz -> gabime-spdlog-v1.14.1.tar.gz
+Successfully downloaded gabime-spdlog-v1.14.1.tar.gz
+-- Extracting source C:/vcpkg/downloads/gabime-spdlog-v1.14.1.tar.gz
+-- Using source at C:/vcpkg/buildtrees/spdlog/src/v1.14.1-0ddeaa008e.clean
+-- Configuring x64-windows-static-md
+-- Building x64-windows-static-md-dbg
+-- Building x64-windows-static-md-rel
+-- Fixing pkgconfig file: C:/vcpkg/packages/spdlog_x64-windows-static-md/lib/pkgconfig/spdlog.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~3.0.7-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.10-4-x86_64.pkg.tar.zst
+-- Using msys root at C:/vcpkg/downloads/tools/msys2/d5586eb050429df1
+-- Fixing pkgconfig file: C:/vcpkg/packages/spdlog_x64-windows-static-md/debug/lib/pkgconfig/spdlog.pc
+-- Installing: C:/vcpkg/packages/spdlog_x64-windows-static-md/share/spdlog/usage
+-- Installing: C:/vcpkg/packages/spdlog_x64-windows-static-md/share/spdlog/copyright
+-- Performing post-build validation
+Elapsed time to handle spdlog:x64-windows-static-md: 11 s
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Some packages did not declare an SPDX license. Check the `copyright` file for each package for more information about their licensing.
+Packages installed in this vcpkg installation declare the following licenses:
+BSD-3-Clause
+BSL-1.0
+MIT
+bshoshany-thread-pool is header-only and can be used from CMake via:
+
+  find_path(BSHOSHANY_THREAD_POOL_INCLUDE_DIRS "BS_thread_pool.hpp")
+  target_include_directories(main PRIVATE ${BSHOSHANY_THREAD_POOL_INCLUDE_DIRS})
+
+clib-util is header-only and can be used from CMake via:
+
+  find_path(CLIB_UTIL_INCLUDE_DIRS "ClibUtil/bitmasks.hpp")
+  target_include_directories(main PRIVATE ${CLIB_UTIL_INCLUDE_DIRS})
+
+The C++/WinRT package provides CMake targets:
+
+    find_package(cppwinrt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Microsoft::CppWinRT)
+
+The CMake variable CPPWINRT_TOOL is also set to point to the .winmd to header command-line tool.
+
+The DirectXTex package provides CMake targets:
+
+    find_package(directxtex CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Microsoft::DirectXTex)
+
+For the 'xbox' feature, it defaults to targeting Xbox Series X|S. To set it to Xbox One,
+create a custom triplet from x64-windows with the addition of the following:
+
+    if (PORT STREQUAL "directxtex")
+        set(DIRECTXTEX_XBOX_CONSOLE_TARGET "xboxone")
+    endif()
+
+eastl provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(EASTL CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE EASTL)
+
+efsw provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(efsw CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE efsw::efsw)
+
+imgui provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(imgui CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE imgui::imgui)
+
+magic-enum provides CMake targets:
+
+    find_package(magic_enum CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE magic_enum::magic_enum)
+
+The package nlohmann-json provides CMake targets:
+
+    find_package(nlohmann_json CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE nlohmann_json::nlohmann_json)
+
+The package nlohmann-json can be configured to not provide implicit conversions via a custom triplet file:
+
+    set(nlohmann-json_IMPLICIT_CONVERSIONS OFF)
+
+For more information, see the docs here:
+    
+    https://json.nlohmann.me/api/macros/json_use_implicit_conversions/
+
+pystring provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(pystring CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE pystring::pystring)
+
+rsm-binary-io provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(binary_io CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE binary_io::binary_io)
+
+simpleini is header-only and can be used from CMake via:
+
+  find_path(SIMPLEINI_INCLUDE_DIRS "ConvertUTF.c")
+  target_include_directories(main PRIVATE ${SIMPLEINI_INCLUDE_DIRS})
+
+tracy provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Tracy CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Tracy::TracyClient)
+
+unordered-dense provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(unordered_dense CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE unordered_dense::unordered_dense)
+
+xbyak provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(xbyak CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE xbyak::xbyak)
+
+catch2 provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Catch2 CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Catch2::Catch2 Catch2::Catch2WithMain)
+
+catch2 provides pkg-config modules:
+
+  # A modern, C++-native test framework for C++14 and above (links in default main)
+  catch2-with-main
+
+  # A modern, C++-native, test framework for C++14 and above
+  catch2
+
+The DirectX Tool Kit for DX11 package provides CMake targets:
+
+    find_package(directxtk CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Microsoft::DirectXTK)
+
+The package fmt provides CMake targets:
+
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt)
+
+    # Or use the header-only version
+    find_package(fmt CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE fmt::fmt-header-only)
+
+rapidcsv is header-only and can be used from CMake via:
+
+  find_path(RAPIDCSV_INCLUDE_DIRS "rapidcsv.h")
+  target_include_directories(main PRIVATE ${RAPIDCSV_INCLUDE_DIRS})
+
+The package spdlog provides CMake targets:
+
+    find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog)
+
+    # Or use the header-only version
+    find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog_header_only)
+
+All requested installations completed successfully in: 4.1 min
+-- Running vcpkg install - done
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.20348.
+-- The CXX compiler identification is MSVC 19.44.35229.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+Options:
+	Enable Xbyak: ON
+	Enable Skyrim SE: ON
+	Enable Skyrim AE: ON
+	Enable Skyrim VR: ON
+	Build Tests: ON
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- Found nlohmann_json: D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/build/vcpkg_installed/x64-windows-static-md/share/nlohmann_json/nlohmann_jsonConfig.cmake (found version "3.11.3")
+-- Found OpenMP_CXX: -openmp (found version "2.0")
+-- Found OpenMP: TRUE (found version "2.0")
+-- Configuring done (284.7s)
+-- Generating done (0.5s)
+-- Build files have been written to: D:/a/SkyrimUpscaler-EyeTracked/SkyrimUpscaler-EyeTracked/build
