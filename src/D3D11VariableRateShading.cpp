@@ -442,8 +442,10 @@ void D3D11VariableRateShading::UpdateGaze()
 			// Fall back to the fixed centers.
 			mGazeActive = false;
 			memcpy(proj, fixedProj, sizeof(proj));
-			mNeedUpdate = true;
-			mPatternOnlyUpdate = true;
+			if (IsEnabled()) {
+				mNeedUpdate = true;
+				mPatternOnlyUpdate = true;
+			}
 		}
 		return;
 	}
@@ -455,7 +457,9 @@ void D3D11VariableRateShading::UpdateGaze()
 		proj[0][1] = ly;
 		proj[1][0] = rx;
 		proj[1][1] = ry;
-		mNeedUpdate = true;
-		mPatternOnlyUpdate = true;
+		if (IsEnabled()) {
+			mNeedUpdate = true;
+			mPatternOnlyUpdate = true;
+		}
 	}
 }

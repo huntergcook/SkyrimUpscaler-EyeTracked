@@ -428,6 +428,10 @@ void SkyrimUpscaler::PlaceFoveatedBox(int eye, float cx, float cy)
 
 void SkyrimUpscaler::UpdateGazeBoxes()
 {
+	// Poll gaze here too: the shading-rate code only does it while foveated shading is on.
+	if (mVRS && mVRS->mEyeTracked && mGazeFollowDLSS)
+		mVRS->UpdateGaze();
+
 	bool want = mGazeFollowDLSS && mVRS->mEyeTracked && mVRS->mGazeActive && mFoveatedRenderSizeX > 0 && mRenderSizeX > 0;
 	if (!want) {
 		if (mGazeBoxActive) {

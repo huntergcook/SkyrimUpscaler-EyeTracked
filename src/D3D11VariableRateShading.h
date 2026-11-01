@@ -41,6 +41,10 @@ public:
 
 	bool IsEnabled();
 
+	// Polls the eye tracker (once per frame). Safe to call even when variable rate shading is off,
+	// so the gaze-following DLSS area can work on its own.
+	void UpdateGaze();
+
 	void UpdateTargetInformation(int displayWidth, int displayHeight, int renderWidth, int renderHeight, float leftProjX, float leftProjY, float rightProjX, float rightProjY);
 
 	void PostOMSetRenderTargets(UINT numViews, ID3D11RenderTargetView* const* renderTargetViews, ID3D11DepthStencilView* depthStencilView);
@@ -70,8 +74,6 @@ private:
 	void ApplyCombinedVRS();
 
 	void SetupCombinedVRS();
-
-	void UpdateGaze();
 
 	uint8_t              DistanceToVRSLevel(float distance);
 	std::vector<uint8_t> CreateCombinedFixedFoveatedVRSPattern(int width, int height, int renderWidth, int renderHeight);
